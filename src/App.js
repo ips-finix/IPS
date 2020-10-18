@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactNotifications from 'react-notifications-component';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { SignIn } from './components/SignIn';
 import { HomePage } from './components/HomePage';
