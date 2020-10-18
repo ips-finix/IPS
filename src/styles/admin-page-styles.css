@@ -1,0 +1,35 @@
+.admin-page-header {
+    position: absolute;
+    width: 350px;
+    height: 31px;
+    left: 35px;
+    top: 30px;
+    
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 31px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.tag-count {
+    position: relative;
+    top: 70px;
+    
+    font-family: Overpass;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+.map {
+    position: relative;
+    width: 370px;
+    left: 22px;
+    top: 90px;
+}

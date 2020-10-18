@@ -1,0 +1,96 @@
+body {
+    background: #E3E8FF;
+}
+
+.home-header {
+    position: absolute;
+    width: 58px;
+    height: 25px;
+    left: 178px;
+    top: 100px;
+
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 31px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.home-container {
+    position: absolute;
+    width: 320px;
+    height: 370px;
+    left: 47px;
+    top: 171px;
+
+    text-align: center;
+    
+    background: #9AAAFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.user-name {
+    position: relative;
+    top: 29px;
+
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+
+    color: #FFFFFF;
+}
+
+.user-email {
+    position: relative;
+    top: 42px;
+
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+
+    color: #FFFFFF;
+}
+
+.user-photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 70px;
+    border-radius: 50%;
+}
+
+.pairing-button {
+    position: absolute;
+    width: 350px;
+    height: 60px;
+    left: 32px;
+    top: 648px;
+    background: #7c90ff;
+    border: none;
+    border-radius: 15px;
+
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.loading {
+    position: relative;
+    top: 150px;
+
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+
+    color: #000000;
+}

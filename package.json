@@ -1,0 +1,41 @@
+{
+  "name": "finix",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/drawer": "^5.8.6",
+    "@react-navigation/native": "^5.7.1",
+    "abort-controller": "^3.0.0",
+    "bufferutil": "^4.0.1",
+    "firebase": "^7.23.0",
+    "plotly.js": "^1.56.0",
+    "proj4": "^2.6.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.13.1",
+    "react-google-login": "^5.1.21",
+    "react-native": "^0.62.2",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-safe-area-context": "^3.1.1",
+    "react-native-screen": "^1.0.1",
+    "react-native-screens": "^2.9.0",
+    "react-native-web": "^0.13.3",
+    "react-navigation": "^4.4.0",
+    "react-navigation-drawer": "^2.5.0",
+    "react-notifications-component": "^2.4.1",
+    "react-plotly.js": "^2.5.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^0.9.5",
+    "utf-8-validate": "^5.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

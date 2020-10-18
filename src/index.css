@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Overpass;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: local('Overpass'), url('./fonts/Overpass/Overpass-Regular.ttf') format('truetype');
+}
