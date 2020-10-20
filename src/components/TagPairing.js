@@ -39,7 +39,7 @@ export class TagPairing extends React.Component {
     // handler function when 'continue' button is clicked
     async handleClick() {
         // check validity of tag
-        const url = "http://ips-backend.herokuapp.com/tags/";
+        const url = "https://ips-backend.herokuapp.com/tags/";
         const response = await fetch(url);
         const tagData = await response.json();
 

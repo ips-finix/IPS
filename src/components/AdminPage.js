@@ -42,7 +42,7 @@ export class AdminPage extends React.Component {
     // populate location map
     async populateMap() {
         // get list of coordinates from api
-        const url = "http://ips-backend.herokuapp.com/coordinates/places/1/";
+        const url = "https://ips-backend.herokuapp.com/coordinates/places/1/";
         const response = await fetch(url);
         const response_data = await response.json();
         console.log("Coordinates:", response_data);

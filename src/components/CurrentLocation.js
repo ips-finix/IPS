@@ -28,7 +28,7 @@ export class CurrentLocation extends React.Component {
         // retrieve location of user 
         if (this.props.location.state.pairedTag) {
             const userTag = this.props.location.state.tagID;
-            const url = "http://ips-backend.herokuapp.com/coordinates/tags/" + userTag + "/";
+            const url = "https://ips-backend.herokuapp.com/coordinates/tags/" + userTag + "/";
             const response = await fetch(url);
             const locationData = await response.json();
             console.log("Location data:", locationData);
@@ -47,7 +47,7 @@ export class CurrentLocation extends React.Component {
 
     // send token to server
     async sendTokenToServer(token) {
-        fetch("http://ips-backend.herokuapp.com/notifications/", {
+        fetch("https://ips-backend.herokuapp.com/notifications/", {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -98,7 +98,7 @@ export class CurrentLocation extends React.Component {
 
     // post data to API to unsubscribe to notifications
     unsubscribeNotification() {
-        fetch("http://ips-backend.herokuapp.com/notifications/", {
+        fetch("https://ips-backend.herokuapp.com/notifications/", {
             method: 'post',
             headers: {
                 'Accept': 'application/json',

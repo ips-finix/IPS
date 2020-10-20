@@ -16,7 +16,7 @@ export class SignIn extends React.Component {
     // check if user profile is in database
     async checkDatabase() {
         // check database
-        const url = "http://ips-backend.herokuapp.com/users/" + this.state.email + "/";
+        const url = "https://ips-backend.herokuapp.com/users/" + this.state.email + "/";
         const userCheck = await fetch(url);
         const data = await userCheck.text();
         if (data !== "") {
@@ -42,7 +42,7 @@ export class SignIn extends React.Component {
 
     // post data to API if user profile does not exist
     postData() {
-        fetch("http://ips-backend.herokuapp.com/users/", {
+        fetch("https://ips-backend.herokuapp.com/users/", {
             method: 'post',
             headers: {
                 'Accept': 'application/json',

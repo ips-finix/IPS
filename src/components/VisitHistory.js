@@ -13,7 +13,7 @@ export class VisitHistory extends React.Component {
     // retrieve user data
     async componentDidMount() {
         const userID = this.props.location.state.userID;
-        const url = "http://ips-backend.herokuapp.com/visits/" + userID + "/";
+        const url = "https://ips-backend.herokuapp.com/visits/" + userID + "/";
         const response = await fetch(url);
         const historyData = await response.json();
         console.log("History data:", historyData);

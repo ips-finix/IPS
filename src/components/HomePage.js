@@ -22,7 +22,7 @@ export class HomePage extends React.Component {
     async componentDidMount() {
         // retrieve user data
         const userEmail = this.props.location.state.email;
-        const url = "http://ips-backend.herokuapp.com/users/" + userEmail + "/";
+        const url = "https://ips-backend.herokuapp.com/users/" + userEmail + "/";
         const response = await fetch(url);
         const userData = await response.json();
         console.log("User data:", userData);
@@ -37,7 +37,7 @@ export class HomePage extends React.Component {
     async postData() {
         // retrieve location of user
         const userTag = this.props.location.state.tagID;
-        const url = "http://ips-backend.herokuapp.com/coordinates/tags/" + userTag + "/";
+        const url = "https://ips-backend.herokuapp.com/coordinates/tags/" + userTag + "/";
         const response = await fetch(url);
         const locationData = await response.json();
 
@@ -47,7 +47,7 @@ export class HomePage extends React.Component {
         console.log("Total duration spent at location:", totalDuration, "seconds");
 
         // post data to API 
-        fetch("http://ips-backend.herokuapp.com/visits/", {
+        fetch("https://ips-backend.herokuapp.com/visits/", {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -66,7 +66,7 @@ export class HomePage extends React.Component {
 
     // post data to API to unsubscribe to notifications
     unsubscribeNotification() {
-        fetch("http://ips-backend.herokuapp.com/notifications/", {
+        fetch("https://ips-backend.herokuapp.com/notifications/", {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
