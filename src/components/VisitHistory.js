@@ -26,11 +26,6 @@ export class VisitHistory extends React.Component {
             return <div className="loading">Loading...</div>
         }
 
-        // when there is no visit history
-        if (!this.state.visitList) {
-            return <div>No visit history</div>
-        }
-
         return (
             <div>
                 <div className="visit-history-header">VISIT HISTORY</div>

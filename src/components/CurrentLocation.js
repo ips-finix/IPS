@@ -139,7 +139,6 @@ export class CurrentLocation extends React.Component {
         // when a tag has been paired and user location can be displayed
         else {
             locationName = <div className="location-name">{this.state.location.place.placeName}</div>
-            console.log(this.state.location.place.placePhotoUrl);
             if (this.state.location.place.placePhotoUrl === null)
                 locationPhoto = <img className="location-photo" src={locationPlaceholder} alt=""></img>
             else
