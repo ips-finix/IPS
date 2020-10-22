@@ -27,7 +27,8 @@ export class SignIn extends React.Component {
         // post data to API if user profile does not exist
         if (!this.state.user) {
             console.log("User profile does not exist.");
-            this.postData();
+            await this.postData();
+            console.log("User data has been posted to API.");
         }
 
         // check whether user is admin
@@ -42,7 +43,7 @@ export class SignIn extends React.Component {
 
     // post data to API if user profile does not exist
     postData() {
-        fetch("https://ips-backend.herokuapp.com/users/", {
+        const res = fetch("https://ips-backend.herokuapp.com/users/", {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -55,7 +56,7 @@ export class SignIn extends React.Component {
                 userRole: 1
             })
         });
-        console.log("User data has been posted to API.");
+        return res;
     }
 
     // handler function for Google Login response

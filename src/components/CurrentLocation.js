@@ -47,7 +47,7 @@ export class CurrentLocation extends React.Component {
 
     // send token to server
     async sendTokenToServer(token) {
-        fetch("https://ips-backend.herokuapp.com/notifications/", {
+        const res = fetch("https://ips-backend.herokuapp.com/notifications/", {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -59,15 +59,17 @@ export class CurrentLocation extends React.Component {
                 mode: "subscribe"
             })
         });
-        console.log("Notification has been subscribed.");
+        return res;
     }
 
     // post data to API to subscribe to notifications
-    subscribeNotification() {
+    async subscribeNotification() {
         messaging.getToken().then((currentToken) => {
             console.log("Token:", currentToken);
-            if (currentToken) 
+            if (currentToken) {
                 this.sendTokenToServer(currentToken);
+                console.log("Notification has been subscribed.");
+            }
             else {
                 console.log("No Instance ID token available. Request permission to generate one.");
                 Notification.requestPermission().then(function(permission) {
@@ -98,7 +100,7 @@ export class CurrentLocation extends React.Component {
 
     // post data to API to unsubscribe to notifications
     unsubscribeNotification() {
-        fetch("https://ips-backend.herokuapp.com/notifications/", {
+        const res = fetch("https://ips-backend.herokuapp.com/notifications/", {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -110,7 +112,7 @@ export class CurrentLocation extends React.Component {
                 mode: "unsubscribe"
             })
         });
-        console.log("Notification has been unsubscribed.");
+        return res;
     }
 
     // handler function when 'subscribed' button is clicked
@@ -120,8 +122,9 @@ export class CurrentLocation extends React.Component {
     }
 
     // handler function when 'unsubscribed' button is clicked
-    handleUnsubscribe(){
-        this.unsubscribeNotification();
+    async handleUnsubscribe(){
+        await this.unsubscribeNotification();
+        console.log("Notification has been unsubscribed.");
         this.setState({ subscribed: false });
     }
 

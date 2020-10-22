@@ -47,7 +47,7 @@ export class HomePage extends React.Component {
         console.log("Total duration spent at location:", totalDuration, "seconds");
 
         // post data to API 
-        fetch("https://ips-backend.herokuapp.com/visits/", {
+        const res = fetch("https://ips-backend.herokuapp.com/visits/", {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -61,12 +61,12 @@ export class HomePage extends React.Component {
                 duration: totalDuration
             })
         });
-        console.log("User's visit data has been posted to API.");
+        return res;
     }
 
     // post data to API to unsubscribe to notifications
     unsubscribeNotification() {
-        fetch("https://ips-backend.herokuapp.com/notifications/", {
+        const res = fetch("https://ips-backend.herokuapp.com/notifications/", {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -78,17 +78,19 @@ export class HomePage extends React.Component {
                 mode: "unsubscribe"
             })
         });
-        console.log("Notification has been unsubscribed.");
+        return res;
     }
 
     // handler function when 'pair' button is clicked
-    handleClick() {
+    async handleClick() {
         // post data to API to record user's visit history
-        this.postData();
+        await this.postData();
+        console.log("User's visit data has been posted to API.");
 
         // unsubscribe to notification if notification has been subscribed
         if (this.state.notification) 
-            this.unsubscribeNotification();
+            await this.unsubscribeNotification();
+            console.log("Notification has been unsubscribed.");
 
         this.setState({ tag: false, notification: false });
     }
